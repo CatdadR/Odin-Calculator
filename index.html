@@ -11,44 +11,44 @@
     <div class="cBody">
         <div class="cDisplay">
             <div class="display">
-                <p>0000000</p>
+                <p class="numDisplay">000000</p>
             </div>
         </div>
         <div class="btnContainer">
             <div class="btnLeftColumn">
                 <div class="btnLTopRow">
-                    <button>AC</button>
-                    <button>+/-</button>
-                    <button>%</button>
+                    <button onclick="clear()">AC</button>
+                    <button onclick="invert()">+/-</button>
+                    <button onclick="percentage()">%</button>
                 </div>
                 <div class="btnLBtmRow">
                     <div class="topRow">
-                        <button>1</button>
-                        <button>2</button>
-                        <button>3</button>
+                        <button onclick="recInput(1)">1</button>
+                        <button onclick="recInput(2)">2</button>
+                        <button onclick="recInput(3)">3</button>
                     </div>
                     <div class="midRow">
-                        <button>4</button>
-                        <button>5</button>
-                        <button>6</button>
+                        <button onclick="recInput(4)">4</button>
+                        <button onclick="recInput(5)">5</button>
+                        <button onclick="recInput(6)">6</button>
                     </div>
                     <div class="midRow">
-                        <button>7</button>
-                        <button>8</button>
-                        <button>9</button>
+                        <button onclick="recInput(7)">7</button>
+                        <button onclick="recInput(8)">8</button>
+                        <button onclick="recInput(9)">9</button>
                     </div>
                     <div class="btmRow">
-                        <button class="zero">0</button>
-                        <button>.</button>
+                        <button class="zero" onclick="recInput(0);">0</button>
+                        <button onclick="recInput('.')">.</button>
                     </div>
                 </div>
             </div>
             <div class="btnRightColumn">
-                <button>/</button>
-                <button>*</button>
-                <button>-</button>
-                <button>+</button>
-                <button>=</button>    
+                <button onclick="operation('/')">/</button>
+                <button onclick="operation('*')">*</button>
+                <button onclick="operation('-')">-</button>
+                <button onclick="operation('+')">+</button>
+                <button onclick="operation('=')">=</button>    
             </div>
     </div>
 </body>
