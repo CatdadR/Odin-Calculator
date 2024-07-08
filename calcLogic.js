@@ -101,7 +101,7 @@ function operation(operator){
     }
 
     calcParams.cOperator = operator
-    calcParams.strTemp = calcParams.strOne
+    calcParams.strTemp = calcParams.strOne 
     updateDisplay(); 
     }
 }
@@ -110,6 +110,10 @@ function updateDisplay(){
     Display = calcParams.Display;
     
     for (let i = 0; i < Display.length; i++) {
-        Display[i].innerHTML = Math.round(calcParams.strTemp*100)/100;
+        if (calcParams.strTemp == "."){
+            Display[i].innerHTML = calcParams.strTemp
+        } else {
+            Display[i].innerHTML = Math.round(calcParams.strTemp*100)/100;
+        }
     }; 
 }
